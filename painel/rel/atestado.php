@@ -68,6 +68,12 @@ if($linhas2 > 0){
 
 }
 
+//Diferença entre datas
+$data_inicio = new DateTime($dataInicial);
+$data_fim = new DateTime($dataFinal);
+$dateInterval = $data_inicio->diff($data_fim);
+$dias = $dateInterval->d + ($dateInterval->y * 12);
+
 
 ?>
 <!DOCTYPE html>
@@ -146,14 +152,15 @@ if($marca_dagua == 'Sim'){ ?>
 	</table>
 </div>
 
-<div id="content" style="margin-top: 70px;">
+<div id="content" style="margin-top: 90px;">
 
 <div style="font-size: 15px;">
-	Atesto para os devidos fins que o Sr(a) <b><?php echo $nome_paciente ?></b> portador do CPF <?php echo $cpf_paciente ?> esteve sob cuidados médicos no dia <?php echo $data_hoje ?> e deverá se afastar de suas atividades pelo período de <b><?php echo $datas ?></b> por motivo de <?php echo $motivo ?>
-</div>
+	<p style="margin-left: 80px;">Atesto para fins trabalhistas, que o Sr(a) <b><?php echo $nome_paciente ?></b> portador do CPF nº <?php echo $cpf_paciente ?></p>
+	<p>residente: <?php echo $endereco_paciente ?>, esteve sob cuidados profissionais no dia __/__/____ e deverá se <p>afastar de suas atividades pelo 
+	 período de <b><?php echo $dias ?> dias </b> por motivo de <?php echo $motivo ?>.</p>
 
 <?php if($obs != ""){ ?>
-<div style="margin-top: 20px; border:1px solid #000; font-size: 14px; padding:5px">
+<div style="margin-top: 50px; border:1px solid #000; font-size: 14px; padding:5px">
 	<b>Informações Relevantes</b>
 	<p style="font-size: 13px"><?php echo $obs ?></p>
 
