@@ -5,7 +5,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 //dados conexão bd local
 $servidor = 'localhost';
-$banco = 'healthclin';
+$banco = 'medclin';
 $usuario = 'root';
 $senha = '';
 
@@ -19,7 +19,7 @@ try {
 $url_sistema = "http://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);
 if($url[1] == 'localhost/'){
-	$url_sistema = "http://$_SERVER[HTTP_HOST]/healthclin/";
+	$url_sistema = "http://$_SERVER[HTTP_HOST]/medclin/";
 }
 
 

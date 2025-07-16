@@ -29,7 +29,7 @@ if($linhas == 0){
 				<input type="email" id="email" name="usuario" placeholder="Seu Email" required>
 				<input type="password" name="senha" placeholder="Senha" required>
 				<button>Login</button>
-				<div style="margin-top: 15px; font-size: 16px; "><a href="#" onclick="recuperar()" style="color:#95e924" title="Recuperar Senha">Recuperar Senha?</a></div>
+				<div style="margin-top: 15px; font-size: 16px; "><a href="#" onclick="recuperar()" style="color:#041125" title="Recuperar Senha">Recuperar Senha?</a></div>
 			</form>	
 		</div>
 	</div>
